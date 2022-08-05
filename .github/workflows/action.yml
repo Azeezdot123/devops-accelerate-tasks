@@ -30,4 +30,4 @@ jobs:
           grep '^NAME' /etc/os-release
       - name: List files in the repository
         run: |
-          ls *${{ github.workspace }}
+          ls -R ${{ github.workspace }}
