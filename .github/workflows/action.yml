@@ -19,7 +19,7 @@ jobs:
         days-before-issue-stale: 1
 
 
-  Show OS Name:
+  Show_OS_Name:
     runs-on: ubuntu-latest
     steps:
       - name: Show the Name of the OS running
