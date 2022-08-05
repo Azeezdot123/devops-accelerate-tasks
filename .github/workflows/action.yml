@@ -27,8 +27,7 @@ jobs:
     steps:
       - name: Show the Name of the OS running
         run: |
-          grep '^VERSION' /etc/os-release
-        # run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          grep '^NAME' /etc/os-release
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls * ${{ github.workspace }}
