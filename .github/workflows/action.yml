@@ -17,13 +17,18 @@ jobs:
         stale-issue-message: 'This issue is stale because it has been open 1 days with no activity.'
         stale-issue-label: 'no-issue-activity'
         days-before-issue-stale: 1
+        close-issue-message: 'This issue is close cause of in activity'
+        close-issue-label: 'no-activity'
+        days-before-issue-close: 2
 
 
   Show_OS_Name:
     runs-on: ubuntu-latest
     steps:
       - name: Show the Name of the OS running
-        run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+        run: |
+          grep '^VERSION' /etc/os-release
+        # run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
