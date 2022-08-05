@@ -1,0 +1,14 @@
+- name: Close Stale Issues
+  on: [push]
+    # schedule:
+    #   - cron: '30 1 * * *'
+
+  jobs:
+    stale:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/stale@v5.1.1
+          with:
+            stale-issue-message: 'This issue is stale because it has been open 1 days with no activity.'
+
+
