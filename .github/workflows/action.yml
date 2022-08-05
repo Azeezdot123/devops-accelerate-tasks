@@ -1,4 +1,4 @@
-name: Close Stale Issues
+name: Close Stale Issues and Show OS Name
 on: [push]
     # schedule:
     #   - cron: '30 1 * * *'
@@ -17,3 +17,13 @@ jobs:
         stale-issue-message: 'This issue is stale because it has been open 1 days with no activity.'
         stale-issue-label: 'no-issue-activity'
         days-before-issue-stale: 1
+
+
+  Show OS Name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the Name of the OS running
+        run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
