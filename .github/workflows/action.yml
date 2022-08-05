@@ -14,13 +14,12 @@ jobs:
     - uses: actions/stale@v5
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        close-issue-message: 'This issue is close cause of in activity'
-        close-issue-label: 'no-activity'
-        days-before-issue-close: 2
         stale-issue-message: 'This issue is stale because it has been open 1 days with no activity.'
         stale-issue-label: 'no-issue-activity'
         days-before-issue-stale: 1
-        
+        close-issue-message: 'This issue is close cause of in activity'
+        close-issue-label: 'no-activity'
+        days-before-issue-close: 2
 
 
   Show_OS_Name:
@@ -31,4 +30,4 @@ jobs:
           grep '^NAME' /etc/os-release
       - name: List files in the repository
         run: |
-          ls -R ${{ github.workspace }}
+          ls -R${{ github.workspace }}
