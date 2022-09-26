@@ -1,0 +1,19 @@
+image:
+  file: .gitpod.dockerfile
+
+tasks:
+  # - name: Start minikube
+  #   command: |
+  #     sudo chown -R $USER $HOME/.minikube
+  #     sudo chmod -R u+wrx $HOME/.minikube
+  #     minikube start --driver=qemu
+  - name: install eksctl
+    command: |
+      curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp && \
+      sudo mv /tmp/eksctl /usr/local/bin
+
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
+    - ms-kubernetes-tools.vscode-kubernetes-tools

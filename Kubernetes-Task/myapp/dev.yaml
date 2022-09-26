@@ -1,0 +1,17 @@
+# Default values for testapp.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image1:
+  repository: mongo
+  pullPolicy: IfNotPresent
+image2:
+  repository: mongo-express
+  pullPolicy: IfNotPresent
+
+service:
+  port: 8081
+  targetPort: 8081
+  nodePort: 33000

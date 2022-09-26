@@ -1,0 +1,28 @@
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: myFirstCluster
+#   region: us-east-1
+
+# vpc:
+#   id: "vpc-0e76d55e6e27562c3"
+#   subnets:
+#     public:
+#       public-one:
+#         id: "subnet-0b3da88ebf2f4e467"
+#       public-two:
+#         id: "subnet-088c5b54630e5544b"
+#   clusterEndpoints:
+#     publicAccess: true
+  
+
+
+
+# nodeGroups:
+#   - name: ng-1
+#     instanceType: t2.micro
+#     desiredCapacity: 2
+#     subnets:
+#       - public-one
+#       - public-two
